@@ -34,7 +34,7 @@ func main() {
 	emailUsername := os.Getenv("EMAIL_USERNAME")
 	emailPassword := os.Getenv("EMAIL_PASSWORD")
 
-	dsn := fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=utf8&parseTime=True&loc=Local", dbUser, dbPass, dbHost, dbName)
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:3306)/%s?charset=utf8&parseTime=True&loc=Local", dbUser, dbPass, dbHost, dbName)
 
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
@@ -99,6 +99,7 @@ func runService(db *gorm.DB, secretKey string, emailUsername string, emailPasswo
 			DbType int `form:"type"`
 			RealId int `form:"id"`
 		}
+
 		var d reqData
 		c.ShouldBind(&d)
 
