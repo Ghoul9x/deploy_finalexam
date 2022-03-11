@@ -1,2 +1,2 @@
-web:finnal-exam
+web:finalexam-heroku
 
