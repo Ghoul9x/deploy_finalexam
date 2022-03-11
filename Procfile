@@ -1,1 +1,1 @@
-web: finnal-exam
+web:finnal-exam
