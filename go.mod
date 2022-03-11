@@ -1,6 +1,6 @@
 module finnal-exam
 
-go 1.15
+go 1.12
 
 require (
 	github.com/btcsuite/btcutil v1.0.2
