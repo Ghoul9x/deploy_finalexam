@@ -56,7 +56,7 @@ func runService(db *gorm.DB, secretKey string, emailUsername string, emailPasswo
 			"message": "pong",
 		})
 	})
-	// CRUD
+
 	v1 := r.Group("/v1")
 
 	v1.POST("/register", ginuser.Register(appCtx))
@@ -99,7 +99,6 @@ func runService(db *gorm.DB, secretKey string, emailUsername string, emailPasswo
 			DbType int `form:"type"`
 			RealId int `form:"id"`
 		}
-
 		var d reqData
 		c.ShouldBind(&d)
 
