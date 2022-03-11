@@ -12,7 +12,6 @@ import (
 	"finnal-exam/modules/userfollow/userfollowtransport/ginuserfollow"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/joho/godotenv"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"log"
@@ -21,10 +20,10 @@ import (
 )
 
 func main() {
-	errEnv := godotenv.Load()
-	if errEnv != nil {
-		panic("Failed to load env file")
-	}
+	//errEnv := godotenv.Load()
+	//if errEnv != nil {
+	//	panic("Failed to load env file")
+	//}
 
 	dbUser := os.Getenv("DB_USER")
 	dbPass := os.Getenv("DB_PASS")
