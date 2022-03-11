@@ -1,1 +1,1 @@
-web: deploy_finalexam
+web:finnal-exam
